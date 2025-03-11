@@ -30,18 +30,18 @@ START
 
   DECLARE tipPercentage AS FLOAT
   IF serviceQuality = "poor" THEN
-    tipPercentage ← 0.10
+    tipPercentage = 0.10
   ELSE IF serviceQuality = "fair" THEN
-    tipPercentage ← 0.15
+    tipPercentage = 0.15
   ELSE IF serviceQuality = "good" THEN
-    tipPercentage ← 0.18
+    tipPercentage = 0.18
   ELSE IF serviceQuality = "excellent" THEN
-    tipPercentage ← 0.20
+    tipPercentage = 0.20
   END IF
 
-  tipAmount ← billAmount × tipPercentage
-  totalAmount ← billAmount + tipAmount
-  amountPerPerson ← totalAmount ÷ numPeople
+  tipAmount = billAmount × tipPercentage
+  totalAmount = billAmount + tipAmount
+  amountPerPerson = totalAmount ÷ numPeople
 
   DISPLAY "Bill amount: $" + billAmount
   DISPLAY "Service quality: " + serviceQuality + " (" + (tipPercentage * 100) + "%)"
